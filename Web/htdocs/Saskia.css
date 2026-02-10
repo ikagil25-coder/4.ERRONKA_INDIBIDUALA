@@ -1,0 +1,17 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.produktu-txartela img {
+    border-radius: 10px;
+    width: 20rem;
+}
+
+.produktu-txartela button {
+    border-style: solid;
+    border-radius: 7px;
+
+}

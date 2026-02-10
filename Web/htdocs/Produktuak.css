@@ -1,0 +1,23 @@
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 2rem;
+
+}
+
+.produktu-txartela img {
+    border-radius: 10px;
+    width: 20rem;
+}
+
+.produktu-txartela button {
+    border-style: solid;
+    border-radius: 7px;
+    width: 10rem;
+
+}
+
+.produktu-txartela button:hover {
+    background-color: rgba(138, 150, 218, 0.368);
+}
