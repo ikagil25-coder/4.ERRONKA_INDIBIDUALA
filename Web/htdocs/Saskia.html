@@ -7,14 +7,23 @@
     <meta name="description" content="Web orrialdearen Saskia">
     <title>Saskia</title>
     <link rel="stylesheet" href="Style.css">
+    <link rel="stylesheet" href="Menu.css">
     <link rel="stylesheet" href="Saskia.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
 </head>
 
 <body>
     <header>
-        <a href="Index.html"><img src="img/logo.jpg" width="95rem" alt="JAJA STUDIOS"></a>
-        <a href="Produktuak.html">Produktuak</a>
-        <a href="Saskia.html"><img src="img/saskia.jpg" width="85rem" alt="Saskia"></a>
+        <a href="Index.html"><img src="img/logo.jpg" alt="IndiUsurbil"></a>
+        <span id="menu-toggle" class="material-symbols-outlined" onclick="menua()">menu</span>
+        <nav id="menu-hamburguesa">
+            <a href="Index.html">Hasiera</a>
+            <a href="Produktuak.html">Produktuak</a>
+            <a href="Estadistikak.html">Estadistikak</a>
+            <a href="Saskia.html"><img src="img/saskia.jpg" alt="Saskia"></a>
+            <a href="Login.html"><img src="img/login.jpg" width="20px" alt="Login"></a>
+        </nav>
     </header>
     <main>
         <h2>Saskia</h2>
@@ -32,10 +41,11 @@
         </div>
     </main>
     <footer>
-        <p>Copyright © 2026 JAJA STUDIOS. Eskubide guztiak erreserbatuta.</p>
+        <p>Copyright © 2026 IndiUsurbil. Eskubide guztiak erreserbatuta.</p>
     </footer>
     <script src="js/Produktuak.js"></script>
     <script src="js/Saskia.js"></script>
+    <script src="js/Menu.js"></script>
 </body>
 
 </html>

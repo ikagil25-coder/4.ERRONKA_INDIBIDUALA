@@ -1,7 +1,6 @@
 header {
     box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.503);
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -12,11 +11,11 @@ a {
 }
 
 a:hover {
-    color: rgba(50, 54, 72, 0.36);
+    color: rgb(178, 178, 178);
 }
 
 header img {
-    width: 10rem;
+    width: 8rem;
 }
 
 footer {
