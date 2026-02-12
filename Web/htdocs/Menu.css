@@ -33,3 +33,58 @@
 img {
     width: 5rem;
 }
+
+@media only screen and (max-width: 2200px) {
+
+    #menu-hamburguesa a {
+        padding: 0rem 8rem;
+        border-bottom: 1px solid white;
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 1800px) {
+
+    #menu-hamburguesa a {
+        padding: 0rem 6rem;
+        border-bottom: 1px solid white;
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 1400px) {
+
+    #menu-hamburguesa a {
+        padding: 0rem 4rem;
+        border-bottom: 1px solid white;
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+
+    #menu-hamburguesa a {
+        padding: 0rem 2rem;
+        border-bottom: 1px solid white;
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+
+    #menu-hamburguesa a {
+        padding: 0rem 0rem;
+        border-bottom: 1px solid white;
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    #menu-hamburguesa {
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        margin-left: 0rem;
+        gap: 1.5rem;
+    }
+}
