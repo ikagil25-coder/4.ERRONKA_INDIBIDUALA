@@ -19,7 +19,8 @@ header img {
 }
 
 footer {
-    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.503);
+    box-shadow: 1px -3px 5px rgba(0, 0, 0, 0.503);
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 10rem;
 }
