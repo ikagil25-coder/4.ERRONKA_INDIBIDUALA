@@ -15,9 +15,9 @@ function saskikoTxartelakSortu() {
             const txartela = document.createElement("div");
             txartela.classList = "produktu-txartela";
             txartela.innerHTML = `
-                <img src="${p.irudia}">
-                <h3>${p.izena}</h3>
-                <span>${p.prezioa}€</span>
+                <img src="${p.image}">
+                <h3>${p.title}</h3>
+                <span>${p.price}€</span>
                 <div>
                     <button class="minus">-</button>
                     <span class="kopuru">${p.kantitatea}</span>
@@ -48,7 +48,7 @@ function guztiraEguneratu() {
     if (produktuak) {
         produktuak.forEach(p => {
             kopurua += p.kantitatea;
-            prezioa += p.prezioa * p.kantitatea;
+            prezioa += p.price * p.kantitatea;
         });
     }
     kopuruElementua.innerText = kopurua;

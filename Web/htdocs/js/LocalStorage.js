@@ -1,30 +1,39 @@
-const produktuEdukiontzia = document.getElementById("produktu-zerrenda");
 const saskiaGakoa = "saskia-artikuluak";
+let produktuGuztiak = [];
 
 /** Produktu guztiak erakusten ditu orrian */
-function produktuakErakutsi() {
-    produktuEdukiontzia.innerHTML = "";
-    produktuak.forEach((p) => {
-        const txartela = document.createElement("div");
-        txartela.classList = "produktu-txartela";
-        txartela.innerHTML = `
-            <img src="${p.irudia}" alt="${p.izena}">
-            <h3>${p.izena}</h3>
-            <span>${p.prezioa}€</span>
-            <button class="gehitu">Saskira gehitu</button>`
-            ;
-        produktuEdukiontzia.appendChild(txartela);
+async function loadDoc() {
+    let response = await fetch("https://fakestoreapi.com/products");
+    produktuGuztiak = await response.json();
 
-        txartela.querySelector(".gehitu").addEventListener("click", () => {
-            saskiariGehitu(p);
-        });
+    let lista = document.getElementById("lista");
+    produktuGuztiak.forEach(produktu => {
+        lista.innerHTML += `
+            <div>
+                <h3>${produktu.title}</h3>
+                <img src="${produktu.image}" width="100">
+                <p>${produktu.price}€</p>
+                <button onclick="erosi(${produktu.id})">Erosi</button>
+            </div>
+            <hr>
+        `;
     });
+}
+
+loadDoc();
+
+/** Produktu bat erosten du (ID bidez bilatu eta saskira gehitu) */
+function erosi(id) {
+    const produktua = produktuGuztiak.find(p => p.id === id);
+    if (produktua) {
+        saskiariGehitu(produktua);
+    }
 }
 
 /** Produktu bat saskiari gehitzen du */
 function saskiariGehitu(p) {
     let saskia = JSON.parse(localStorage.getItem(saskiaGakoa)) || [];
-    const index = saskia.findIndex(artikulua => artikulua.id === p.id);
+    const index = saskia.findIndex(produktu => produktu.id === p.id);
 
     if (index === -1) {
         saskia.push({ ...p, kantitatea: 1 });
@@ -33,6 +42,5 @@ function saskiariGehitu(p) {
     }
 
     localStorage.setItem(saskiaGakoa, JSON.stringify(saskia));
-    console.log(`${p.izena} saskira gehitu da.`);
+    console.log(`${p.title} saskira gehitu da.`);
 }
-produktuakErakutsi();
