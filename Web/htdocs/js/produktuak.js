@@ -1,21 +1,37 @@
-const produktuak = [
-    {
-        id: 1,
-        izena: "Produktua 1",
-        prezioa: 20,
-        irudia: "img/Kamiseta_Txuria.jpg"
-    },
-    {
-        id: 2,
-        izena: "Produktua 2",
-        prezioa: 30,
-        irudia: "img/Galtza.jpg"
-    },
-    {
-        id: 3,
-        izena: "Produktua 3",
-        prezioa: 60,
-        irudia: "img/Sudadera.jpg"
-    }
-];
+let produktuak = [];
 
+const kategoriaMap = {
+    "men": "men's clothing",
+    "women": "women's clothing"
+};
+
+fetch("https://fakestoreapi.com/products")
+    .then(res => res.json())
+    .then(data => {
+        produktuak = data;
+        produktuakErakutsi(produktuak);
+    });
+
+function produktuakErakutsi(zerrenda) {
+    const lista = document.getElementById("lista");
+    lista.innerHTML = "";
+    zerrenda.forEach(p => {
+        lista.innerHTML += `
+            <div class="produktua">
+                <img src="${p.image}" alt="${p.title}">
+                <h3>${p.title}</h3>
+                <p>${p.price}€</p>
+            </div>
+        `;
+    });
+}
+
+function filtratu(kategoria) {
+    if (kategoria === "guztiak") {
+        produktuakErakutsi(produktuak);
+    } else {
+        const benetakoKat = kategoriaMap[kategoria] || kategoria;
+        const iragaziak = produktuak.filter(p => p.category === benetakoKat);
+        produktuakErakutsi(iragaziak);
+    }
+}
