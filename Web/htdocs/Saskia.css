@@ -2,16 +2,109 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
 
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+#cart-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 40px;
+    width: 100%;
+}
+
+.produktu-txartela {
+    display: flex;
+    gap: 30px;
+    align-items: center;
 }
 
 .produktu-txartela img {
-    border-radius: 10px;
-    width: 20rem;
+    width: 15rem;
+    height: 20rem;
+    object-fit: cover;
 }
 
-.produktu-txartela button {
-    border-style: solid;
-    border-radius: 7px;
+.produktu-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
+.info-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.kantitate-hautatzailea {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.kantitate-hautatzailea button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.ezkutuan {
+    display: none;
+}
+
+#totalak {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+#totalak p {
+    font-size: 2rem;
+}
+
+.botoiak {
+    display: flex;
+    gap: 40px;
+}
+
+#reiniciar {
+    background-color: #c00;
+    color: white;
+    border: 2px solid black;
+    border-radius: 40px;
+    padding: 15px 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#erosi {
+    background-color: #bcd1ff;
+    color: black;
+    border: 2px solid black;
+    border-radius: 40px;
+    padding: 15px 40px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#reiniciar:hover {
+    background-color: #a00;
+}
+
+#erosi:hover {
+    background-color: #a5bfff;
 }
