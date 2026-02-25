@@ -16,14 +16,20 @@ function saskikoTxartelakSortu() {
             txartela.classList = "produktu-txartela";
             txartela.innerHTML = `
                 <img src="${p.image}">
-                <h3>${p.title}</h3>
-                <span>${p.price}€</span>
-                <div>
-                    <button class="minus">-</button>
-                    <span class="kopuru">${p.kantitatea}</span>
-                    <button class="plus">+</button>
-                </div>`
-                ;
+                <div class="produktu-info">
+                    <div class="info-row">
+                        <span class="label">Prezioa</span>
+                        <span class="balioa">${p.price}€</span>
+                    </div>
+                    <div class="info-row">
+                        <span class="label">Kantitatea</span>
+                        <div class="kantitate-hautatzailea">
+                            <button class="minus">-</button>
+                            <span class="kopuru">${p.kantitatea}</span>
+                            <button class="plus">+</button>
+                        </div>
+                    </div>
+                </div>`;
             saskiEdukiontzia.appendChild(txartela);
 
             txartela.querySelector(".minus").addEventListener("click", () => {
@@ -51,8 +57,8 @@ function guztiraEguneratu() {
             prezioa += p.price * p.kantitatea;
         });
     }
-    kopuruElementua.innerText = kopurua;
-    prezioElementua.innerText = prezioa.toFixed(2);
+    if (kopuruElementua) kopuruElementua.innerText = kopurua;
+    if (prezioElementua) prezioElementua.innerText = prezioa.toFixed(2);
 }
 
 function egoeraEgiaztatu() {
