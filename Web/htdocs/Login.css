@@ -1,0 +1,87 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    font-weight: 400;
+}
+
+#mezuak {
+    margin-bottom: 30px;
+    font-size: 2rem;
+    font-weight: bold;
+    height: 3rem;
+}
+
+#garbi {
+    color: #4CAF50;
+}
+
+#errorea {
+    color: #e53935;
+}
+
+.ezkutuan {
+    display: none;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 600px;
+    gap: 30px;
+    align-items: center;
+}
+
+.input-taldea {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input-taldea label {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.input-taldea input {
+    background: none;
+    border: none;
+    border-bottom: 1.5px solid #000;
+    font-size: 1.2rem;
+    padding: 5px 0;
+    outline: none;
+}
+
+button {
+    margin-top: 30px;
+    background-color: #bcd1ff;
+    color: #000;
+    border: 1.5px solid #000;
+    border-radius: 40px;
+    padding: 12px 60px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    width: fit-content;
+}
+
+button:hover {
+    background-color: #a5bfff;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}

@@ -8,6 +8,7 @@
     <title>Login</title>
     <link rel="stylesheet" href="Style.css">
     <link rel="stylesheet" href="Menu.css">
+    <link rel="stylesheet" href="Login.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
 </head>
@@ -25,13 +26,26 @@
         </nav>
     </header>
     <main>
-        <form>
-            <label for="emaila">Email:</label>
-            <input type="text" id="emaila" name="emaila"><br><br>
-            <label for="pasahitza">Pasahitza:</label>
-            <input type="password" id="pasahitza" name="pasahitza"><br><br>
-            <input onclick="alert('Erregistratu zara!')" type="submit" value="Jarraitu">
-        </form>
+        <h1>Log In</h1>
+
+        <div id="mezuak">
+            <span id="garbi" class="ezkutuan">Erregistratu zara!</span>
+            <span id="errorea" class="ezkutuan">Ez zara erregistratu</span>
+        </div>
+
+        <div class="login-form">
+            <div class="input-taldea">
+                <label for="emaila">Email</label>
+                <input type="text" id="emaila" name="emaila">
+            </div>
+
+            <div class="input-taldea">
+                <label for="pasahitza">Pasahitza</label>
+                <input type="password" id="pasahitza" name="pasahitza">
+            </div>
+
+            <button onclick="balidatu()">Jarraitu</button>
+        </div>
     </main>
 
     <footer>
@@ -43,6 +57,7 @@
 
     </footer>
     <script src="js/Menu.js"></script>
+    <script src="js/Login.js"></script>
 </body>
 
 </html>
