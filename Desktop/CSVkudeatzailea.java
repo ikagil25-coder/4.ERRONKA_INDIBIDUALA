@@ -14,13 +14,14 @@ public class CSVkudeatzailea {
             while ((linea = br.readLine()) != null) {
                 try {
                     String[] datuak = linea.split(";");
-                    if (datuak.length >= 5) {
+                    if (datuak.length >= 6) {
                         String izena = datuak[0].trim();
                         String deskribapena = datuak[1].trim();
                         double prezioa = Double.parseDouble(datuak[2].trim());
                         int stocka = Integer.parseInt(datuak[3].trim());
-                        String irudiak = datuak[4].trim();
-                        if (DatuBasea.gehitu(new Produktua(izena, deskribapena, prezioa, stocka, "1", irudiak)))
+                        String kategoria = datuak[4].trim();
+                        String irudiak = datuak[5].trim();
+                        if (DatuBasea.gehitu(new Produktua(izena, deskribapena, prezioa, stocka, kategoria, irudiak)))
                             kontagailua++;
                     }
                 } catch (Exception e) {

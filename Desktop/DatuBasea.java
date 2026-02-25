@@ -44,7 +44,7 @@ public class DatuBasea {
             ps.setString(2, p.getDeskribapena());
             ps.setDouble(3, p.getPrezioa());
             ps.setInt(4, p.getStocka());
-            ps.setInt(5, 1);
+            ps.setInt(5, Integer.parseInt(p.getKategoria()));
             ps.setString(6, p.getIrudiak());
             return ps.executeUpdate() > 0;
         } catch (SQLException e) {

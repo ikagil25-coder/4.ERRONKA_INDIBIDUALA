@@ -1,83 +1,47 @@
 [
   {
-    "id": 3,
+    "id": 1,
     "title": "Nike Air Max",
     "description": "Zapatilla txuriak",
     "price": 120.0,
     "stock": 50,
+    "category": "2",
+    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Adidas Sudadera",
+    "description": "Sudadera beltza",
+    "price": 85.5,
+    "stock": 30,
+    "category": "4",
+    "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"
+  },
+  {
+    "id": 3,
+    "title": "Levis Prakak",
+    "description": "Praka urdinak",
+    "price": 65.0,
+    "stock": 100,
     "category": "1",
-    "image": "https://example.com/nike.jpg"
+    "image": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg"
   },
   {
     "id": 4,
-    "title": "Adidas Sudadera",
-    "description": "Sudadera beltza",
-    "price": 85.5,
-    "stock": 30,
-    "category": "1",
-    "image": "https://example.com/adidas.jpg"
+    "title": "Zara Kamiseta",
+    "description": "Kamiseta gorria",
+    "price": 25.99,
+    "stock": 200,
+    "category": "2",
+    "image": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg"
   },
   {
     "id": 5,
-    "title": "Levis Prakak",
-    "description": "Praka urdinak",
-    "price": 65.0,
-    "stock": 100,
-    "category": "1",
-    "image": "https://example.com/levis.jpg"
-  },
-  {
-    "id": 6,
-    "title": "Zara Kamiseta",
-    "description": "Kamiseta gorria",
-    "price": 25.99,
-    "stock": 200,
-    "category": "1",
-    "image": "https://example.com/zara.jpg"
-  },
-  {
-    "id": 7,
-    "title": "Nike Air Max",
-    "description": "Zapatilla txuriak",
-    "price": 120.0,
-    "stock": 50,
-    "category": "1",
-    "image": "https://example.com/nike.jpg"
-  },
-  {
-    "id": 8,
-    "title": "Adidas Sudadera",
-    "description": "Sudadera beltza",
-    "price": 85.5,
-    "stock": 30,
-    "category": "1",
-    "image": "https://example.com/adidas.jpg"
-  },
-  {
-    "id": 9,
-    "title": "Levis Prakak",
-    "description": "Praka urdinak",
-    "price": 65.0,
-    "stock": 100,
-    "category": "1",
-    "image": "https://example.com/levis.jpg"
-  },
-  {
-    "id": 10,
-    "title": "Zara Kamiseta",
-    "description": "Kamiseta gorria",
-    "price": 25.99,
-    "stock": 200,
-    "category": "1",
-    "image": "https://example.com/zara.jpg"
-  },
-  {
-    "id": 11,
     "title": "H&M Jaka",
     "description": "Jaka berdea",
     "price": 110.0,
     "stock": 15,
-    "category": "1",
-    "image": "https://example.com/hm.jpg"
+    "category": "5",
+    "image": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg"
   }
 ]
