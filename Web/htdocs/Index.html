@@ -8,6 +8,7 @@
     <title>Orrialde Nagusia</title>
     <link rel="stylesheet" href="Style.css">
     <link rel="stylesheet" href="Menu.css">
+    <link rel="stylesheet" href="Index.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=menu" />
 </head>
@@ -25,7 +26,23 @@
         </nav>
     </header>
     <main>
+        <div class="carrusel-container">
+            <button class="flecha" onclick="cambiarSlide(-1)">&#8592;</button>
 
+            <div class="carrusel-ventana">
+                <div class="slide active">
+                    <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?w=800" alt="Ropa 1">
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1583743814966-8936f5b7be1a?w=800" alt="Ropa 2">
+                </div>
+                <div class="slide">
+                    <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=800" alt="Ropa 3">
+                </div>
+            </div>
+
+            <button class="flecha" onclick="cambiarSlide(1)">&#8594;</button>
+        </div>
     </main>
     <footer>
         <a href="https://www.instagram.com"><img src="img/insta.png" alt="Instagram"></a>
@@ -36,6 +53,7 @@
 
     </footer>
     <script src="js/Menu.js"></script>
+    <script src="js/Index.js"></script>
 </body>
 
 </html>
