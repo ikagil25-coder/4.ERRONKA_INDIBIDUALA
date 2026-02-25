@@ -1,23 +1,76 @@
 main {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    margin-top: 2rem;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 60px;
+    padding: 40px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
 
+#filtroak {
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    gap: 12px;
+    padding-top: 60px;
+}
+
+#filtroak button {
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1rem;
+    color: #444;
+    padding: 4px 0;
+    cursor: pointer;
+}
+
+#filtroak button:hover {
+    font-weight: bold;
+}
+
+#lista {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 40px;
+}
+
+.produktu-txartela {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .produktu-txartela img {
-    border-radius: 10px;
     width: 20rem;
+    height: 320px;
+    object-fit: cover;
+    margin-bottom: 8px;
+}
+
+.produktu-txartela h3 {
+    display: none;
+}
+
+.produktu-txartela p {
+    font-size: 1rem;
+    margin: 2px 0;
+    color: #1a1a1a;
 }
 
 .produktu-txartela button {
-    border-style: solid;
-    border-radius: 7px;
-    width: 10rem;
-
+    background-color: #bcd1ff;
+    color: #000;
+    border: 1.5px solid #000;
+    border-radius: 40px;
+    padding: 10px 30px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
 .produktu-txartela button:hover {
-    background-color: rgba(138, 150, 218, 0.368);
+    background-color: #a5bfff;
 }
