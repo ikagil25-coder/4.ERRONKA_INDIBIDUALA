@@ -1,11 +1,15 @@
 let produktuak = [];
 
 const kategoriaMap = {
-    "men": "men's clothing",
-    "women": "women's clothing"
+    "guztiak": "guztiak",
+    "prakak": "1",
+    "kamisetak": "2",
+    "alkandorak": "3",
+    "sudaderak": "4",
+    "jakak": "5"
 };
 
-fetch("https://fakestoreapi.com/products")
+fetch("./produktuak.json")
     .then(res => res.json())
     .then(data => {
         produktuak = data;

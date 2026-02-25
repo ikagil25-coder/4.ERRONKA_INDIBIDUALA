@@ -69,7 +69,7 @@ public class Main {
                     System.out.println(kopurua + " produktu kargatu dira.");
                 }
                 case 6 -> {
-                    JSONKudeatzailea.esportatu("produktuak.json", DatuBasea.zerrendatu());
+                    JSONKudeatzailea.esportatu("ERRONKA4_ANDER_GIL/Web/htdocs/produktuak.json", DatuBasea.zerrendatu());
                 }
                 case 7 -> {
                     System.out.print("Search text: ");

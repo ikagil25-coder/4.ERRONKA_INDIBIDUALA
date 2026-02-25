@@ -3,7 +3,7 @@ let produktuGuztiak = [];
 
 /** Produktu guztiak erakusten ditu orrian */
 async function loadDoc() {
-    let response = await fetch("https://fakestoreapi.com/products");
+    let response = await fetch("./produktuak.json");
     produktuGuztiak = await response.json();
 
     let lista = document.getElementById("lista");
