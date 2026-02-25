@@ -27,7 +27,6 @@ footer {
 
 main {
     display: flex;
-
     align-items: center;
     min-height: calc(100vh - 18rem);
     padding: 2rem 0;
@@ -77,4 +76,19 @@ main {
 
 .flecha:hover {
     color: rgb(178, 178, 178);
+}
+
+main:has(.carrusel-container) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 18rem);
+}
+
+main {
+    display: block;
+    min-height: calc(100vh - 18rem);
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
 }
