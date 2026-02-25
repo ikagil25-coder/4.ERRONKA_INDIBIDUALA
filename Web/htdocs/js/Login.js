@@ -8,7 +8,7 @@ function balidatu() {
     garbiMsg.classList.add("ezkutuan");
     erroreaMsg.classList.add("ezkutuan");
 
-    if (emailInput === "IndiUsurbil@admin.com" && passwordInput === "IndiUsurbilAdmin") {
+    if (emailInput === "IndiUsurbil@admin.com" && passwordInput === "Admin") {
         garbiMsg.classList.remove("ezkutuan");
     } else {
         erroreaMsg.classList.remove("ezkutuan");
