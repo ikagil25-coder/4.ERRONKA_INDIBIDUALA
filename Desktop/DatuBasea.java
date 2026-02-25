@@ -14,33 +14,22 @@ public class DatuBasea {
     private static final String PASS = "Passwordsql";
 
     public static Connection konektatu() {
-        Connection con = null;
         try {
-            con = DriverManager.getConnection(URL, USER, PASS);
+            return DriverManager.getConnection(URL, USER, PASS);
         } catch (SQLException e) {
-            System.err.println("Errorea konektatzerakoan: " + e.getMessage());
+            return null;
         }
-        return con;
     }
 
-    public List<Produktua> zerrendatu() {
+    public static List<Produktua> zerrendatu() {
         List<Produktua> lista = new ArrayList<>();
-        String sql = "SELECT * FROM produktuak";
-
         try (Connection con = konektatu();
-                PreparedStatement ps = con.prepareStatement(sql);
+                PreparedStatement ps = con.prepareStatement("SELECT * FROM produktuak");
                 ResultSet rs = ps.executeQuery()) {
-
             while (rs.next()) {
-                Produktua p = new Produktua(
-                        rs.getInt("id"),
-                        rs.getString("izena"),
-                        rs.getString("deskribapena"),
-                        rs.getDouble("prezioa"),
-                        rs.getInt("stocka"),
-                        String.valueOf(rs.getInt("kategoria_id")),
-                        rs.getString("irudiak"));
-                lista.add(p);
+                lista.add(new Produktua(rs.getInt("id"), rs.getString("izena"), rs.getString("deskribapena"),
+                        rs.getDouble("prezioa"), rs.getInt("stocka"),
+                        String.valueOf(rs.getInt("kategoria_id")), rs.getString("irudiak")));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -48,24 +37,61 @@ public class DatuBasea {
         return lista;
     }
 
-    public boolean gehitu(Produktua p) {
-        String sql = "INSERT INTO produktuak (izena, deskribapena, prezioa, stocka, kategoria_id, irudiak) VALUES (?, ?, ?, ?, ?, ?)";
-
-        try (Connection con = konektatu();
-                PreparedStatement ps = con.prepareStatement(sql)) {
-
+    public static boolean gehitu(Produktua p) {
+        String sql = "INSERT INTO produktuak (izena, deskribapena, prezioa, stocka, kategoria_id, irudiak) VALUES (?,?,?,?,?,?)";
+        try (Connection con = konektatu(); PreparedStatement ps = con.prepareStatement(sql)) {
             ps.setString(1, p.getIzena());
             ps.setString(2, p.getDeskribapena());
             ps.setDouble(3, p.getPrezioa());
             ps.setInt(4, p.getStocka());
             ps.setInt(5, 1);
             ps.setString(6, p.getIrudiak());
-
             return ps.executeUpdate() > 0;
-
         } catch (SQLException e) {
-            e.printStackTrace();
             return false;
         }
+    }
+
+    public static boolean eguneratu(Produktua p) {
+        String sql = "UPDATE produktuak SET izena=?, deskribapena=?, prezioa=?, stocka=?, irudiak=? WHERE id=?";
+        try (Connection con = konektatu(); PreparedStatement ps = con.prepareStatement(sql)) {
+            ps.setString(1, p.getIzena());
+            ps.setString(2, p.getDeskribapena());
+            ps.setDouble(3, p.getPrezioa());
+            ps.setInt(4, p.getStocka());
+            ps.setString(5, p.getIrudiak());
+            ps.setInt(6, p.getId());
+            return ps.executeUpdate() > 0;
+        } catch (SQLException e) {
+            return false;
+        }
+    }
+
+    public static boolean ezabatu(int id) {
+        String sql = "DELETE FROM produktuak WHERE id=?";
+        try (Connection con = konektatu(); PreparedStatement ps = con.prepareStatement(sql)) {
+            ps.setInt(1, id);
+            return ps.executeUpdate() > 0;
+        } catch (SQLException e) {
+            return false;
+        }
+    }
+
+    public static List<Produktua> bilatu(String testua) {
+        List<Produktua> lista = new ArrayList<>();
+        String sql = "SELECT * FROM produktuak WHERE izena LIKE ? OR deskribapena LIKE ?";
+        try (Connection con = konektatu(); PreparedStatement ps = con.prepareStatement(sql)) {
+            ps.setString(1, "%" + testua + "%");
+            ps.setString(2, "%" + testua + "%");
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                lista.add(new Produktua(rs.getInt("id"), rs.getString("izena"), rs.getString("deskribapena"),
+                        rs.getDouble("prezioa"), rs.getInt("stocka"),
+                        String.valueOf(rs.getInt("kategoria_id")), rs.getString("irudiak")));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return lista;
     }
 }
