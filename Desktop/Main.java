@@ -71,7 +71,7 @@ public class Main {
                 case 6 -> {
                     JSONKudeatzailea.esportatu("ERRONKA4_ANDER_GIL/Web/htdocs/produktuak.json", DatuBasea.zerrendatu());
                 }
-                case 7 -> {
+                case 7 -> { 
                     System.out.print("Search text: ");
                     String text = sc.nextLine();
                     for (Produktua p : DatuBasea.bilatu(text))
