@@ -1,56 +1,92 @@
 [
   {
-    "id": 3,
+    "id": 14,
     "title": "Alkandora",
-    "description": "Alkandora Txuria",
-    "price": 70.0,
-    "stock": 30,
-    "category": "1",
+    "description": "Alkandora Txuria Dotorea",
+    "price": 85.0,
+    "stock": 20,
+    "category": "3",
     "image": "img/alkandora.jpg"
   },
   {
-    "id": 4,
-    "title": "Adidas Sudadera",
-    "description": "Sudadera beltza",
-    "price": 85.5,
-    "stock": 30,
+    "id": 15,
+    "title": "Levis Praka",
+    "description": "Levis Praka Urdina",
+    "price": 35.0,
+    "stock": 45,
     "category": "1",
-    "image": "https://example.com/adidas.jpg"
+    "image": "img/galtza_levis.png"
   },
   {
-    "id": 5,
-    "title": "Levis Prakak",
-    "description": "Praka urdinak",
-    "price": 65.0,
-    "stock": 100,
-    "category": "1",
-    "image": "https://example.com/levis.jpg"
+    "id": 16,
+    "title": "HM Jaka",
+    "description": "HM Jaka Berdea",
+    "price": 90.0,
+    "stock": 23,
+    "category": "5",
+    "image": "img/jaka_hm.png"
   },
   {
-    "id": 6,
-    "title": "Zara Kamiseta",
-    "description": "Kamiseta gorria",
-    "price": 25.99,
-    "stock": 200,
-    "category": "1",
-    "image": "https://example.com/zara.jpg"
-  },
-  {
-    "id": 11,
-    "title": "H&M Jaka",
-    "description": "Jaka berdea",
-    "price": 110.0,
+    "id": 17,
+    "title": "Nike Jaka",
+    "description": "Nike Jaka Urdina",
+    "price": 100.0,
     "stock": 15,
-    "category": "1",
-    "image": "https://example.com/hm.jpg"
+    "category": "5",
+    "image": "img/jaka_nike.png"
   },
   {
-    "id": 12,
-    "title": "Kamiseta Txuria",
-    "description": "Kamiseta Txuria",
+    "id": 18,
+    "title": "Zara Kamiseta",
+    "description": "Zara Kamiseta Gorria",
+    "price": 20.0,
+    "stock": 10,
+    "category": "2",
+    "image": "img/kamiseta_zara.png"
+  },
+  {
+    "id": 19,
+    "title": "Adidas Sudadera",
+    "description": "Adidas Sudadera Beltza",
+    "price": 80.0,
+    "stock": 30,
+    "category": "4",
+    "image": "img/sudadera_adidas.png"
+  },
+  {
+    "id": 20,
+    "title": "Prakak",
+    "description": "Praka Berdeak",
     "price": 45.0,
     "stock": 20,
     "category": "1",
+    "image": "img/Galtza.jpg"
+  },
+  {
+    "id": 21,
+    "title": "Kamiseta",
+    "description": "Kamiseta Txuria",
+    "price": 15.0,
+    "stock": 60,
+    "category": "2",
     "image": "img/Kamiseta_Txuria.jpg"
+  },
+  {
+    "id": 22,
+    "title": "Sudadera",
+    "description": "IndiUsurbil Sudadera",
+    "price": 60.0,
+    "stock": 5,
+    "category": "4",
+    "image": "img/Sudadera.jpg"
+  },
+  {
+    "id": 23,
+    "title": "Alkandora beltza",
+    "description": "Alkandora dotorea beltza",
+    "price": 45.0,
+    "stock": 40,
+    "category": "3",
+    "image": "img/alkandora_beltza.png"
   }
 ]

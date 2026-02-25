@@ -28,9 +28,11 @@ public class Main {
                     System.out.print("Stocka: ");
                     int st = sc.nextInt();
                     sc.nextLine();
+                    System.out.print("Kategoria ID: ");
+                    String ka = sc.nextLine();
                     System.out.print("Irudia: ");
                     String ir = sc.nextLine();
-                    if (DatuBasea.gehitu(new Produktua(iz, de, pr, st, "1", ir)))
+                    if (DatuBasea.gehitu(new Produktua(iz, de, pr, st, ka, ir)))
                         System.out.println("OK!");
                 }
                 case 3 -> {
@@ -48,9 +50,11 @@ public class Main {
                     System.out.print("BERRIA - Stocka: ");
                     int st = sc.nextInt();
                     sc.nextLine();
+                    System.out.print("BERRIA - Kategoria ID: ");
+                    String ka = sc.nextLine();
                     System.out.print("BERRIA - Irudia: ");
                     String ir = sc.nextLine();
-                    if (DatuBasea.eguneratu(new Produktua(id, iz, de, pr, st, "1", ir)))
+                    if (DatuBasea.eguneratu(new Produktua(id, iz, de, pr, st, ka, ir)))
                         System.out.println("OK!");
                 }
                 case 4 -> {
@@ -71,7 +75,7 @@ public class Main {
                 case 6 -> {
                     JSONKudeatzailea.esportatu("ERRONKA4_ANDER_GIL/Web/htdocs/produktuak.json", DatuBasea.zerrendatu());
                 }
-                case 7 -> { 
+                case 7 -> {
                     System.out.print("Search text: ");
                     String text = sc.nextLine();
                     for (Produktua p : DatuBasea.bilatu(text))

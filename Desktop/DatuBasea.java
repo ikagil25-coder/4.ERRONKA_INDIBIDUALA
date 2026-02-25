@@ -53,14 +53,15 @@ public class DatuBasea {
     }
 
     public static boolean eguneratu(Produktua p) {
-        String sql = "UPDATE produktuak SET izena=?, deskribapena=?, prezioa=?, stocka=?, irudiak=? WHERE id=?";
+        String sql = "UPDATE produktuak SET izena=?, deskribapena=?, prezioa=?, stocka=?, kategoria_id=?, irudiak=? WHERE id=?";
         try (Connection con = konektatu(); PreparedStatement ps = con.prepareStatement(sql)) {
             ps.setString(1, p.getIzena());
             ps.setString(2, p.getDeskribapena());
             ps.setDouble(3, p.getPrezioa());
             ps.setInt(4, p.getStocka());
-            ps.setString(5, p.getIrudiak());
-            ps.setInt(6, p.getId());
+            ps.setInt(5, Integer.parseInt(p.getKategoria()));
+            ps.setString(6, p.getIrudiak());
+            ps.setInt(7, p.getId());
             return ps.executeUpdate() > 0;
         } catch (SQLException e) {
             return false;
