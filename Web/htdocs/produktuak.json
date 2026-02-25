@@ -1,47 +1,56 @@
 [
   {
-    "id": 1,
-    "title": "Alkandora txuria",
-    "description": "Alkandora dotorea eta klasikoa",
-    "price": 45.0,
-    "stock": 40,
-    "category": "3",
+    "id": 3,
+    "title": "Alkandora",
+    "description": "Alkandora Txuria",
+    "price": 70.0,
+    "stock": 30,
+    "category": "1",
     "image": "img/alkandora.jpg"
   },
   {
-    "id": 2,
+    "id": 4,
     "title": "Adidas Sudadera",
     "description": "Sudadera beltza",
     "price": 85.5,
     "stock": 30,
-    "category": "4",
-    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=500"
+    "category": "1",
+    "image": "https://example.com/adidas.jpg"
   },
   {
-    "id": 3,
+    "id": 5,
     "title": "Levis Prakak",
     "description": "Praka urdinak",
     "price": 65.0,
     "stock": 100,
     "category": "1",
-    "image": "https://images.unsplash.com/photo-1542272604-787c3835535d?w=500"
+    "image": "https://example.com/levis.jpg"
   },
   {
-    "id": 4,
+    "id": 6,
     "title": "Zara Kamiseta",
     "description": "Kamiseta gorria",
     "price": 25.99,
     "stock": 200,
-    "category": "2",
-    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500"
+    "category": "1",
+    "image": "https://example.com/zara.jpg"
   },
   {
-    "id": 5,
+    "id": 11,
     "title": "H&M Jaka",
     "description": "Jaka berdea",
     "price": 110.0,
     "stock": 15,
-    "category": "5",
-    "image": "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=500"
+    "category": "1",
+    "image": "https://example.com/hm.jpg"
+  },
+  {
+    "id": 12,
+    "title": "Kamiseta Txuria",
+    "description": "Kamiseta Txuria",
+    "price": 45.0,
+    "stock": 20,
+    "category": "1",
+    "image": "img/Kamiseta_Txuria.jpg"
   }
 ]
