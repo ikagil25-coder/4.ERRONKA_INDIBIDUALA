@@ -6,10 +6,8 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int aukera;
-        do {
-            System.out.println(
-                    "1.Bistaratatu produktuak\n 2.Gehitu Produktuak\n 3.Aldatu Produktuak\n 4.Ezabatu Produktuak\n 5.CSV-tik kargatu\n 6.JSON esportatu\n 7.Bilatu Produktuak\n 0.Irten");
-            System.out.print("Aukera: ");
+        do {// Menuaren birfaktorizazioa, 87.lerroan
+            erakutsiMenua();
             aukera = sc.nextInt();
             sc.nextLine();
 
@@ -86,5 +84,11 @@ public class Main {
             }
         } while (aukera != 0);
         sc.close();
+    }// Menuaren birfaktorizazioa
+
+    private static void erakutsiMenua() {
+        System.out.println(
+                "\n1.Bistaratatu produktuak\n 2.Gehitu Produktuak\n 3.Aldatu Produktuak\n 4.Ezabatu Produktuak\n 5.CSV-tik kargatu\n 6.JSON esportatu\n 7.Bilatu Produktuak\n 0.Irten");
+        System.out.print("Aukera: ");
     }
 }
