@@ -16,7 +16,7 @@ import java.util.List;
  * @version 1.0
  */
 public class DatuBasea {
-    private static final String URL = "jdbc:mysql://localhost:3306/indiusurbil";
+    private static final String URL = "jdbc:mysql://localhost:3307/indiusurbil";
     private static final String USER = "root";
     private static final String PASS = "Passwordsql";
 
@@ -50,13 +50,13 @@ public class DatuBasea {
                         rs.getDouble("prezioa"), rs.getInt("stocka"),
                         String.valueOf(rs.getInt("kategoria_id")), rs.getString("irudiak")));
             }
-    /**
-     * Produktu berria datu-basean gehitu.
-     * JAVADOC: 50. lerroan
-     * 
-     * @param p Gehitzeko produktua
-     * @return true ondo gehitu bada, false bestela
-     */
+            /**
+             * Produktu berria datu-basean gehitu.
+             * JAVADOC: 50. lerroan
+             * 
+             * @param p Gehitzeko produktua
+             * @return true ondo gehitu bada, false bestela
+             */
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -71,13 +71,13 @@ public class DatuBasea {
             ps.setDouble(3, p.getPrezioa());
             ps.setInt(4, p.getStocka());
             ps.setInt(5, Integer.parseInt(p.getKategoria()));
-    /**
-     * Datu-basean produktua eguneratu.
-     * JAVADOC: 62. lerroan
-     * 
-     * @param p Eguneratzeko produktua
-     * @return true ondo eguneratu bada, false bestela
-     */
+            /**
+             * Datu-basean produktua eguneratu.
+             * JAVADOC: 62. lerroan
+             * 
+             * @param p Eguneratzeko produktua
+             * @return true ondo eguneratu bada, false bestela
+             */
             ps.setString(6, p.getIrudiak());
             return ps.executeUpdate() > 0;
         } catch (SQLException e) {
@@ -87,13 +87,13 @@ public class DatuBasea {
 
     public static boolean eguneratu(Produktua p) {
         String sql = "UPDATE produktuak SET izena=?, deskribapena=?, prezioa=?, stocka=?, kategoria_id=?, irudiak=? WHERE id=?";
-    /**
-     * Produktua datu-basean ezabatu ID bidez.
-     * JAVADOC: 74. lerroan
-     * 
-     * @param id Ezabatzeko produktuaren ID
-     * @return true ondo ezabatu bada, false bestela
-     */
+        /**
+         * Produktua datu-basean ezabatu ID bidez.
+         * JAVADOC: 74. lerroan
+         * 
+         * @param id Ezabatzeko produktuaren ID
+         * @return true ondo ezabatu bada, false bestela
+         */
         try (Connection con = konektatu(); PreparedStatement ps = con.prepareStatement(sql)) {
             ps.setString(1, p.getIzena());
             ps.setString(2, p.getDeskribapena());
@@ -104,13 +104,13 @@ public class DatuBasea {
             ps.setInt(7, p.getId());
             return ps.executeUpdate() > 0;
         } catch (SQLException e) {
-    /**
-     * Produktuak bilaatu testua izena edo deskribapena bidez.
-     * JAVADOC: 83. lerroan
-     * 
-     * @param testua Bilatzeko testua
-     * @return Bilatutako produktuen zerrenda
-     */
+            /**
+             * Produktuak bilaatu testua izena edo deskribapena bidez.
+             * JAVADOC: 83. lerroan
+             * 
+             * @param testua Bilatzeko testua
+             * @return Bilatutako produktuen zerrenda
+             */
             return false;
         }
     }
