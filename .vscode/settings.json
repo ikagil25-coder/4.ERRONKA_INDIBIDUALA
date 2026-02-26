@@ -1,0 +1,6 @@
+{
+    "java.project.referencedLibraries": [
+        "ERRONKA4_ANDER_GIL/Desktop/lib/**/*.jar",
+        "test-lib\\**\\*.jar"
+    ]
+}
