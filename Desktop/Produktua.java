@@ -1,5 +1,12 @@
 package ERRONKA4_ANDER_GIL.Desktop;
 
+/**
+ * Produktuaren klasea. Dendan saltaturiko edukia adierazten du.
+ * Propietateak: id, izena, deskribapena, prezioa, stocka, kategoria eta irudiak.
+ * 
+ * @author Ander Gil
+ * @version 1.0
+ */
 public class Produktua {
 
     private int id;
@@ -10,7 +17,16 @@ public class Produktua {
     private String kategoria;
     private String irudiak;
 
-    // Konstruktorea id gabe (produktu berriak sortzeko)
+    /**
+     * Konstruktorea id gabe. Produktu berriak sortzeko erabiltzen da.
+     * 
+     * @param izena Produktuaren izena
+     * @param deskribapena Produktuaren deskribapena
+     * @param prezioa Produktuaren prezioa
+     * @param stocka Produktuaren stock kopurua
+     * @param kategoria Produktuaren kategoria
+     * @param irudiak Produktuaren irudiaren fitxategia
+     */
     public Produktua(String izena, String deskribapena, double prezioa, int stocka, String kategoria, String irudiak) {
         this.izena = izena;
         this.deskribapena = deskribapena;
@@ -20,8 +36,23 @@ public class Produktua {
         this.irudiak = irudiak;
     }
 
-    // Konstruktorea id-arekin (datu-basetik irakurtzeko)
+    /**
+     * Konstruktorea id-arekin. Datu-basetik irakurtzeko produktuak sortzeko erabiltzen da.
+     * 
+     * @param id Produktuaren identifikadorea
+     * @param izena Produktuaren izena
+     * @param deskribapena Produktuaren deskribapena
+     * @param prezioa Produktuaren prezioa
+     * @param stocka Produktuaren stock kopurua
+     * @param kategoria Produktuaren kategoria
+     * @param irudiak Produktuaren irudiaren fitxategia
+     */
     public Produktua(int id, String izena, String deskribapena, double prezioa, int stocka, String kategoria,
+    /**
+     * Produktuaren identifikadorea lortu.
+     * JAVADOC: 59. lerroan
+     * @return produktuaren id
+     */
             String irudiak) {
         this.id = id;
         this.izena = izena;

@@ -4,8 +4,22 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 
+/**
+ * Produktuak JSON formatora esportatzeko klasea.
+ * Produktuen zerrenda JSON fitxategian gordetzen du.
+ * 
+ * @author Ander Gil
+ * @version 1.0
+ */
 public class JSONKudeatzailea {
 
+    /**
+     * Produktuak JSON formatoan fitxategian esportatu.
+     * JAVADOC: 18. lerroan
+     * 
+     * @param fitxategia JSON fitxategiaren bidea
+     * @param produktuak Esportatzeko produktuen zerrenda
+     */
     public static void esportatu(String fitxategia, List<Produktua> produktuak) {
         StringBuilder sb = new StringBuilder();
         sb.append("[\n");

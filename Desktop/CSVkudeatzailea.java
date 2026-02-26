@@ -4,8 +4,22 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
+/**
+ * CSV fitxategiak irakurtzeko eta produktuak kargatzeko klasea.
+ * Fitxategian produktuak ; karakterearekin bereizita daude.
+ * 
+ * @author Ander Gil
+ * @version 1.0
+ */
 public class CSVkudeatzailea {
 
+    /**
+     * CSV fitxategitik produktuak kargatu eta datu-basean gehitu.
+     * JAVADOC: 20. lerroan
+     * 
+     * @param fitxategia CSV fitxategiaren bidea
+     * @return Kargatutako produktuen kopurua
+     */
     public static int kargatu(String fitxategia) {
         int kontagailua = 0;
         try (BufferedReader br = new BufferedReader(new FileReader(fitxategia))) {

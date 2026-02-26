@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"ERRONKA4_ANDER_GIL.Desktop","l":"CSVkudeatzailea"},{"p":"ERRONKA4_ANDER_GIL.Desktop","l":"DatuBasea"},{"p":"ERRONKA4_ANDER_GIL.Desktop","l":"JSONKudeatzailea"},{"p":"ERRONKA4_ANDER_GIL.Desktop","l":"Main"},{"p":"ERRONKA4_ANDER_GIL.Desktop","l":"Produktua"}];updateSearchResults();

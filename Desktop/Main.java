@@ -2,7 +2,19 @@ package ERRONKA4_ANDER_GIL.Desktop;
 
 import java.util.Scanner;
 
+/**
+ * Aplikazioaren sarrera puntua. Menu interaktiboa dago produktuak kudeatzeko.
+ * 
+ * @author Ander Gil
+ * @version 1.0
+ */
 public class Main {
+    /**
+     * Aplikazioa abiarazten du menu interaktiboa erakutsiz.
+     * Produktuak sortu, aldatu, ezabatu, kargatu eta bilatzeko aukera dago.
+     * 
+     * @param args Argumentuak (ez erabiltzen)
+     */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int aukera;
@@ -86,6 +98,10 @@ public class Main {
         sc.close();
     }// Menuaren birfaktorizazioa
 
+    /**
+     * Menuaren mezua erakusten du eta aukeraren sartze agindua bidaltzeen dago.
+     * JAVADOC: 87. lerroan
+     */
     private static void erakutsiMenua() {
         System.out.println(
                 "\n1.Bistaratatu produktuak\n 2.Gehitu Produktuak\n 3.Aldatu Produktuak\n 4.Ezabatu Produktuak\n 5.CSV-tik kargatu\n 6.JSON esportatu\n 7.Bilatu Produktuak\n 0.Irten");
