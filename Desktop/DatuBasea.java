@@ -16,7 +16,7 @@ import java.util.List;
  * @version 1.0
  */
 public class DatuBasea {
-    private static final String URL = "jdbc:mysql://localhost:3307/indiusurbil";
+    private static final String URL = "jdbc:mysql://localhost:3306/indiusurbil";
     private static final String USER = "root";
     private static final String PASS = "Passwordsql";
 
@@ -30,6 +30,9 @@ public class DatuBasea {
         try {
             return DriverManager.getConnection(URL, USER, PASS);
         } catch (SQLException e) {
+            System.err.println("❌ KONEXIO ERROREA: " + e.getMessage());
+            System.err.println("URL: " + URL);
+            e.printStackTrace();
             return null;
         }
     }
